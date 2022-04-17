@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace 名称空间-->
+
+<!--在这里写增删改查语句-->
+<mapper namespace="mapper.UserMapper">
+
+
+
+
+
+    <resultMap id="UserMap" type="pojo.User">
+
+        <result  property="password" column="password"/>
+        <result  property="userName" column="user_name"/>
+    </resultMap>
+
+</mapper>

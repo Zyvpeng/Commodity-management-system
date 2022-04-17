@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace 名称空间-->
+
+<!--在这里写增删改查语句-->
+<mapper namespace="mapper.BrandMapper">
+
+
+
+
+
+    <resultMap id="BrandMap" type="pojo.Brand">
+<!--        <result column="id" property="id"/>-->
+<!--        <result property="status" column="status"/>-->
+<!--        <result property="description" column="description"/>-->
+<!--        <result property="ordered" column="ordered"/>-->
+        <result  property="brandName" column="brand_name"/>
+        <result  property="companyName" column="company_name"/>
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [14/Apr/2022:18:21:44 +0800] "GET /ServletCRUD HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [14/Apr/2022:18:21:44 +0800] "GET /ServletCRUD/ HTTP/1.1" 200 181 http-bio-8080-exec-3 8
+0:0:0:0:0:0:0:1 - - [14/Apr/2022:18:21:46 +0800] "GET /ServletCRUD/login.jsp HTTP/1.1" 200 931 http-bio-8080-exec-4 46
+0:0:0:0:0:0:0:1 - - [14/Apr/2022:18:21:46 +0800] "GET /ServletCRUD/css/login.css HTTP/1.1" 200 1468 http-bio-8080-exec-5 1
+0:0:0:0:0:0:0:1 - - [14/Apr/2022:18:21:46 +0800] "GET /ServletCRUD/imgs/Desert.jpg HTTP/1.1" 200 6664596 http-bio-8080-exec-6 26
+0:0:0:0:0:0:0:1 - - [14/Apr/2022:18:21:55 +0800] "POST /ServletCRUD/ServletLogin HTTP/1.1" 302 - http-bio-8080-exec-7 386
+0:0:0:0:0:0:0:1 - - [14/Apr/2022:18:21:55 +0800] "GET /ServletCRUD/selectAllServlet HTTP/1.1" 200 1714 http-bio-8080-exec-8 27
+0:0:0:0:0:0:0:1 - - [14/Apr/2022:18:22:02 +0800] "GET /ServletCRUD/login.jsp HTTP/1.1" 200 943 http-bio-8080-exec-9 2
