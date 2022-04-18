@@ -6,13 +6,14 @@
     <link href="css/register.css" rel="stylesheet">
 </head>
 <body>
+<script src="js/axios-0.18.0.js"></script>
 
 <div class="form-div">
     <div class="reg-content">
         <h1>欢迎注册</h1>
 
     </div>
-    <form id="reg-form" action="/TomcatLogin/signUp" method="post">
+    <form id="reg-form" action="/ServletCRUD/signUp" method="post">
 
         <table>
 
@@ -21,7 +22,7 @@
                 <td class="inputs">
                     <input name="username" type="text" id="username">
                     <br>
-                    <span id="username_err" class="err_msg" style="display: none">用户名不太受欢迎</span>
+                    <span id="username_err" class="err_msg" style="display: none">用户名已经被使用</span>
                 </td>
 
             </tr>
@@ -45,5 +46,32 @@
     </form>
 
 </div>
+
+
+
+
+<script>
+
+    document.getElementById("username").onblur=function () {
+        let elementById = document.getElementById("username");
+        let username = this.value;
+
+        //get
+        axios({
+            method:"get",
+            url:"http://localhost:8080/ServletCRUD/axiosServlet?username="+username
+        }).then(function (resp){
+            if(resp.data==true){
+
+                document.getElementById("username_err").style.display='';
+            }
+        })
+
+    }
+
+
+
+
+</script>
 </body>
 </html>

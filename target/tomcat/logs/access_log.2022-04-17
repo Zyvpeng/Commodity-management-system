@@ -211,3 +211,11 @@
 0:0:0:0:0:0:0:1 - - [17/Apr/2022:17:46:14 +0800] "GET /ServletCRUD/login.jsp HTTP/1.1" 200 943 http-bio-8080-exec-4 1
 0:0:0:0:0:0:0:1 - - [17/Apr/2022:17:46:31 +0800] "POST /ServletCRUD/ServletLogin HTTP/1.1" 302 - http-bio-8080-exec-5 380
 0:0:0:0:0:0:0:1 - - [17/Apr/2022:17:46:31 +0800] "GET /ServletCRUD/selectAllServlet HTTP/1.1" 200 1714 http-bio-8080-exec-6 21
+0:0:0:0:0:0:0:1 - - [17/Apr/2022:18:30:18 +0800] "GET /ServletCRUD HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [17/Apr/2022:18:30:18 +0800] "GET /ServletCRUD/ HTTP/1.1" 200 947 http-bio-8080-exec-3 36
+0:0:0:0:0:0:0:1 - - [17/Apr/2022:18:30:24 +0800] "GET /ServletCRUD/ HTTP/1.1" 200 947 http-bio-8080-exec-4 2
+0:0:0:0:0:0:0:1 - - [17/Apr/2022:18:30:35 +0800] "POST /ServletCRUD/ServletLogin HTTP/1.1" 302 - http-bio-8080-exec-5 354
+0:0:0:0:0:0:0:1 - - [17/Apr/2022:18:30:35 +0800] "GET /ServletCRUD/selectAllServlet HTTP/1.1" 200 1714 http-bio-8080-exec-7 20
+0:0:0:0:0:0:0:1 - - [17/Apr/2022:18:30:39 +0800] "GET /ServletCRUD/deleteBrand?id=20 HTTP/1.1" 200 1311 http-bio-8080-exec-8 12
+0:0:0:0:0:0:0:1 - - [17/Apr/2022:18:30:43 +0800] "GET /ServletCRUD/addBrand.jsp HTTP/1.1" 200 599 http-bio-8080-exec-9 3
+0:0:0:0:0:0:0:1 - - [17/Apr/2022:18:30:55 +0800] "GET /ServletCRUD/deleteBrand?id=20 HTTP/1.1" 200 1311 http-bio-8080-exec-10 6

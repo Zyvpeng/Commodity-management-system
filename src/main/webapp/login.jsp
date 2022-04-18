@@ -32,7 +32,7 @@
         <div id="subDiv">
             <input type="submit" class="button" value="login up">
             <input type="reset" class="button" value="reset">&nbsp;&nbsp;&nbsp;
-            <a href="register.jsp">没有账号？点击注册</a>
+            <a href="register.html">没有账号？点击注册</a>
         </div>
     </form>
 </div>
