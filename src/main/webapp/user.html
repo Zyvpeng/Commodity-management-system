@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+</head>
+<body>
+
+
+<br>
+<table border="1" cellspacing="0" width="800" id="userTable">
+    <tr>
+        <th>序号</th>
+        <th>用户名称</th>
+
+    </tr>
+
+
+</table>
+
+<script src="js/axios-0.18.0.js"></script>
+
+<script >
+    window.onload = function (){
+        axios({
+            method:"get",
+            url:"http://localhost:8080/ServletCRUD/selectUsersServlet"
+        }).then(function (resp){
+            let users=resp.data;
+            let userdata ="    <tr>\n" +
+                "        <th>序号</th>\n" +
+                "        <th>用户名称</th>\n" +
+                "\n" +
+                "    </tr>";
+
+
+            for(let i=0;i<users.length;i++){
+                let user =users[i];
+                userdata+="\n" +
+                    "    <tr align=\"center\">\n" +
+                    "        <td>" + (i + 1) + "</td>\n" +
+                    "        <td>" + user.userName + "</td>\n" +
+                    "\n" +
+                    "    </tr>";
+            }
+
+            document.getElementById("userTable").innerHTML=userdata;
+        })
+    }
+</script>
+
+</body>
+</html>

@@ -18,6 +18,9 @@
 </head>
 
 <body>
+
+
+
 <div id="loginDiv" style="...">
     <form action="/ServletCRUD/ServletLogin" method="post" id="form">
         <h1 id="loginMsg">LOGIN IN</h1>
@@ -36,6 +39,27 @@
         </div>
     </form>
 </div>
+
+
+<script src="js/axios-0.18.0.js"></script>
+<script>
+
+
+    document.getElementById("username").onblur=function (){
+        let username = this.value;
+
+        axios({
+            method:"get",
+            url:"http://localhost:8080/ServletCRUD/axiosServlet?username="+username
+        }).then(function (resp){
+            if(resp.data==false){
+                document.getElementById("errorMsg").innerHTML="此用户不存在";
+            }else{
+                document.getElementById("errorMsg").innerHTML="";
+            }
+        })
+    }
+</script>
 
 
 

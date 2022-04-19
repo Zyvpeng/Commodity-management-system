@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import pojo.User;
 import util.SqlSessionFactoryUtils;
 
+import java.util.List;
+
 public class UserService {
     //调用BrandMapper.selectAll()
     SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtils.getSqlSessionFactory();
@@ -42,6 +44,20 @@ public class UserService {
         mapper.InsertUser(username,password);
         sqlSession.commit();
         sqlSession.close();
+    }
+
+
+    public List<User> SelectAllUser(){
+        SqlSession sqlSession =sqlSessionFactory.openSession();
+        UserMapper userMapper=sqlSession.getMapper(UserMapper.class);
+
+
+        List<User> users = userMapper.SeletAllUser();
+
+        return users;
+
+
+
     }
 
 

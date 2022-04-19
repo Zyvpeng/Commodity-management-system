@@ -6,21 +6,22 @@
     <link href="css/register.css" rel="stylesheet">
 </head>
 <body>
-
+<script  src="js/axios-0.18.0.js"></script>
 
 <div class="form-div">
     <div class="reg-content">
         <h1>欢迎注册</h1>
 
     </div>
-    <form id="reg-form" action="/ServletCRUD/signUp" method="post">
+    <form id="reg-form"  >
 
         <table>
 
             <tr>
+
                 <td>用户名</td>
                 <td class="inputs">
-                    <input name="username" type="text" id="username">
+                    <input name="adminName" type="text" id="adminName">
                     <br>
                     <span id="username_err" class="err_msg" style="display:none">用户名已经被使用</span>
                 </td>
@@ -40,42 +41,48 @@
         </table>
 
         <div class="buttons">
-            <input value="注 册" type="submit" id="reg_btn">
+            <input  type="button" value="注 册" type="submit" id="reg_btn">
         </div>
         <br class="clear">
     </form>
 
 </div>
-
-
-<script src="js/axios-0.18.0.js"></script>
-
 <script>
 
-    document.getElementById("username").onblur=function () {
-        let elementById = document.getElementById("username");
-        let username = this.value;
+    document.getElementById("reg_btn").onclick=function () {
+
+        // document.write("asd");
+        let formData= {
+            adminName:"",
+            password:"",
+        }
+
+        formData.adminName=document.getElementById("adminName").value;
+        formData.password=document.getElementById("password").value;
 
 
-
-        //get
+//get
         axios({
-            method:"get",
-            url:"http://localhost:8080/ServletCRUD/axiosServlet?username="+username
+            method:"post",
+            url:"http://localhost:8080/ServletCRUD/adminSignUpServlet",
+            data:formData
         }).then(function (resp){
-            if(resp.data==true){
+            if(resp.data==false){
 
                 document.getElementById("username_err").style.display='';
+
             }else{
-                document.getElementById("username_err").style.display='none';
+
+                location.href="http://localhost:8080/ServletCRUD/user.html"
+
             }
         })
 
     }
 
-
-
-
 </script>
+
+
+
 </body>
 </html>
