@@ -4,6 +4,7 @@ web\AxiosServlet.class
 pojo\Brand.class
 web\SelectByIdServlet.class
 service\UserService.class
+web\AdminLoginServlet.class
 web\AdminSignUpServlet.class
 web\SelectUsersServlet.class
 pojo\User.class

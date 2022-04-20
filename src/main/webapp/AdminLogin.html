@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员登录页面</title>
+</head>
+<body>
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link href="css/login.css" rel="stylesheet">
+</head>
+
+</body>
+
+
+<body>
+<div id="loginDiv" style="...">
+    <form id="form">
+        <h1 id="loginMsg">LOGIN IN</h1>
+        <span id="errorMsg" style="display:none" >账号或密码错误</span>
+        <p>Username:<input id="adminName" name="adminName"  type="text"></p>
+
+        <p>Password:<input id="password" name="password"  type="password"></p>
+
+        <p>Remember:<input id="remember" name="remember" value="1" type="checkbox"></p>
+
+        <div id="subDiv">
+            <input type="submit" class="button" id="login_btn" value="login up">
+            <input type="reset" class="button" value="reset">&nbsp;&nbsp;&nbsp;
+            <a href="register.html">没有账号？点击注册</a>
+        </div>
+    </form>
+</div>
+
+
+<script src="js/axios-0.18.0.js"></script>
+<script>
+
+
+    document.getElementById("login_btn").onclick=function () {
+
+        // document.write("asd");
+        let formData= {
+            adminName:"",
+            password:"",
+        }
+
+        formData.adminName=document.getElementById("adminName").value;
+        formData.password=document.getElementById("password").value;
+
+
+//get
+        axios({
+            method:"post",
+            url:"http://localhost:8080/ServletCRUD/adminLoginServlet",
+            data:formData
+        }).then(function (resp){
+            if(resp.data==false){
+
+                document.getElementById("errorMsg").style.display='';
+
+            }else{
+
+                location.href="http://localhost:8080/ServletCRUD/user.html"
+
+            }
+        })
+
+    }
+</script>
+
+</body>
+
+</html>

@@ -24,7 +24,7 @@ public class LoginFilter implements Filter {
         HttpServletRequest req =(HttpServletRequest) servletRequest;
         //判断资源路径是否和登录注册相关
 
-        String[] urls={"/axiosServlet","index.html","/login.jsp","/imgs/","/css/","/ServletLogin","register.jsp","register.html","/registerServlet","AdminRegister.html","/adminSignUpServlet","/axios-0.18.0.js"};
+        String[] urls={"AdminLogin.html","/adminLoginServlet","/axiosServlet","index.html","/login.jsp","/imgs/","/css/","/ServletLogin","register.jsp","register.html","/registerServlet","AdminRegister.html","/adminSignUpServlet","/axios-0.18.0.js"};
 
         String url = req.getRequestURL().toString();
 //        System.out.println(url);

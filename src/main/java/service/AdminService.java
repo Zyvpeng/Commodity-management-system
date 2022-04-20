@@ -7,6 +7,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import pojo.Admin;
 import util.SqlSessionFactoryUtils;
 
+import java.util.List;
+
 public class AdminService {
     SqlSessionFactory sqlSessionFactory = SqlSessionFactoryUtils.getSqlSessionFactory();
 
@@ -27,5 +29,15 @@ public class AdminService {
         Admin admin=mapper.SelectAdminByName(adminName);
 
         return admin;
+    }
+
+
+    public List<Admin> SelectAllAdmin(){
+        SqlSession sqlSession=sqlSessionFactory.openSession();
+        AdminMapper mapper=sqlSession.getMapper(AdminMapper.class);
+
+        List<Admin> admins = mapper.selectAll();
+
+        return admins;
     }
 }
